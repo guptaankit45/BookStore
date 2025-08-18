@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 const user = new mongoose.Schema({
@@ -23,7 +24,7 @@ const user = new mongoose.Schema({
     },
     avatar:{
         type:String,
-        default:"./public/avatar.jpg"
+        default:"/public/avatar.jpg"
     },
     role:{
         type:String,

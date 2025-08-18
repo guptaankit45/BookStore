@@ -18,16 +18,22 @@ const Favourites = () => {
       setfavouriteBooks(response.data.data);
     };
     fetch();
-  },[] );
+  },[favouriteBooks] );
   return (
-    <div className='grid grid-cols-4 gap-4 '>
+    <>
+     {favouriteBooks && favouriteBooks.length ===0 && (
+        <div className='text-5xl font-semibold text-zinc-500 flex items-center justify-center flex-col w-full h-[100%]'>No Favourite Books</div>
+      )}
+    <div className='grid grid-cols-3 gap-4'>
        {favouriteBooks &&
        favouriteBooks.map((items,i)=>(
         <div key={i}>
-        <BookCard data={items}/>
+        <BookCard data={items} favourite={true}/>
         </div>
        )) }
     </div>
+    </>
+    
   )
 }
 

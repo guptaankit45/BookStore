@@ -22,7 +22,7 @@ router.put("/add-book-to-favourite",authenticateToken,async(req,res)=>{
     }
 });
 // remove book from api
-router.delete("/remove-book-from-favourite",authenticateToken,async(req,res)=>{
+router.put("/remove-book-from-favourite",authenticateToken,async(req,res)=>{
     try{
         const { bookid, id } = req.headers;
         if (!bookid || !id) {
