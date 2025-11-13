@@ -28,6 +28,7 @@ app.get('/',(req,res)=>{
 //creating port
 // const port = process.env.PORT || 3000;  // Make sure there is no trailing comma
 
-app.listen(3000, () => {
-    console.log(`Server is running on port ${3000}`);
-});
+// app.listen(3000, () => {
+//     console.log(`Server is running on port ${3000}`);
+// });
+module.exports = app;
