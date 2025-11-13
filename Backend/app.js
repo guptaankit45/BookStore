@@ -18,6 +18,13 @@ app.use("/api/v1",Books);
 app.use("/api/v1",Favourites);
 app.use("/api/v1",Cart);
 app.use("/api/v1",Order);
+app.get('/',(req,res)=>{
+    res.send({
+        activeStatus:true,
+        error:false,
+
+    })
+})
 //creating port
 // const port = process.env.PORT || 3000;  // Make sure there is no trailing comma
 
