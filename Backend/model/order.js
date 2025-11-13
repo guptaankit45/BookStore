@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const order = new mongoose.Schema({
   user: {
     type: mongoose.Types.ObjectId,
-    ref: "User", // 👈 should match model name
+    ref: "User", //  should match model name
   },
   book: {
     type: mongoose.Types.ObjectId,
